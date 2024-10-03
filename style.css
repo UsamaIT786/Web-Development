@@ -1,0 +1,239 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* Header Styles */
+header {
+    background-color: black;
+    padding: 10px 0;
+    animation: slideIn 1s ease-in-out;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    color: yellow;
+    font-size: 2rem;
+    font-weight: bold;
+    animation: pulse 2s infinite;
+}
+
+.logo:hover {
+    color: rgb(15, 255, 15);
+    cursor: pointer;
+}
+
+.navbar .nav-links {
+    list-style: none;
+}
+
+.navbar .nav-links li {
+    display: inline-block;
+    margin-left: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.navbar .nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-links li a:hover {
+    color: yellow;
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+/* About Section */
+.about-section {
+    padding: 50px 20px;
+    background-color: white;
+    text-align: center;
+    animation: slideIn 1s ease-in-out;
+}
+
+.about-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: black;
+    animation: pulse 3s infinite;
+    padding-right: 60px;
+}
+
+
+.about-section p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    color: black;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Portfolio Section */
+.portfolio-section {
+    padding: 50px 20px;
+    background-color: lightgreen;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.portfolio-section h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 30px;
+    padding-right: 60px;
+}
+
+.portfolio-section h2:hover {
+    color: red;
+    cursor: pointer;
+    animation: pulse 2s infinite;
+}
+
+.portfolio-items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.portfolio-item {
+    background-color: white;
+    padding: 10px;
+    margin: 15px;
+    flex: 1 1 calc(33.333% - 30px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+    animation: slideIn 1s ease-in-out;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-10px);
+    background-color: yellow;
+}
+
+.portfolio-item img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.portfolio-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.portfolio-item p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 50px 20px;
+    background-color: black;
+    text-align: center;
+    animation: slideIn 1.2s ease-in-out;
+}
+
+.contact-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: white;
+    animation: pulse 3s infinite;
+    padding-right: 60px;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    border: 1px solid yellow;
+    border-radius: 10px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.contact-form button {
+    background-color: yellow;
+    color: black;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color:rgb(11, 255, 11);
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: yellow;
+    color: black;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .portfolio-items {
+        flex-direction: column;
+    }
+
+    .portfolio-item {
+        flex: 1 1 100%;
+    }
+
+    .nav-links li {
+        display: block;
+        text-align: center;
+        margin: 10px 0;
+    }
+}
